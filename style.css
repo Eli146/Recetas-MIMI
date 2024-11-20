@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 600px;
+    background: #FC5C7D;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(230, 95%, 70%, 0.603), hsla(348, 96%, 67%, 0.61)), url(Diseño\ sin\ título.png); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    color: #e5e0e7;
+}
+nav{
+    padding: 30px 50px 0 0;
+    display: flex;
+    justify-content: end;
+    text-align: center;
+}
+nav a{
+    color: #e7e2eb;
+    font-weight: 300;
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 18px;
+}
+nav a:hover{
+    color: rgb(255, 255, 255);
+    background-color: #ec59d4;  
+    transition: 150ms;
+}
+header .textos-header{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.com h1{
+    padding: 50px;
+    text-align: center;
+}
+.comida{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    margin: 20px;
+}
+.comida img{
+    width: 200px;
+    height: 200px;
+    border-radius: 2px 25px 7px 10px;
+}
+.comida h2{
+    font-size: 18px;
+    color: black;
+}
+.comida a{
+    text-decoration: none;
+}
+footer{
+    background-color: #FC5C7D;
+    padding: 40px 0;
+    margin: 20px 0;
+    text-align: center;
+}
+footer p{
+    color: #e5e0e7;
+}
