@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Open Sans", sans-serif;
+}
+header{
+    display: flex;
+    background-color: #D47C31;
+    gap: 650px;
+}
+header img{
+    width: 70px;
+}
+/*Aqui inicia la sección de menude navegación*/
+nav{
+    max-width: 900px;
+    margin: auto;
+    font-size: 15px;
+}
+.menu-horizontal{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+.menu-horizontal > li > a{
+    display: block;
+    padding: 22px;
+    color: #faf3fa;
+    text-decoration: none;
+}
+.menu-horizontal > li > a:hover{
+    color: #0e0d0d;
+}
+.menu-vertical{
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: #281513;
+}
+.menu-vertical li a{
+    display: block;
+    color: aliceblue;
+    text-decoration: none;
+    padding: 15px 15px 15px 20px;
+}
+.menu-horizontal li:hover .menu-vertical{
+    display: block;
+}
+.menu-vertical li>:hover{
+    background-color: #D47C31;
+}
+/*Aqui es la sección para el desarrolo de la receta*/
+
+/*Aqui inicia la sección de footer*/
+footer{
+    background-color: #D47C31;
+    padding: 30px;
+    display: flexbox;
+    justify-content: end;
+    text-align: center;
+}

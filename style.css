@@ -1,40 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 
 header{
     width: 100%;
     height: 600px;
-    background: #FC5C7D;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, hsla(230, 95%, 70%, 0.603), hsla(348, 96%, 67%, 0.61)), url(Diseño\ sin\ título.png); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-image: url(Recetas\ MIMI\ \(1\).png);
     background-size: cover;
     background-attachment: fixed;
     position: relative;
-    color: #e5e0e7;
+    color: #f7f3f8;
 }
 nav{
-    padding: 30px 50px 0 0;
+    margin: auto;
+    font-size: 15px;
+}
+.menu-horizontal{
+    list-style: none;
     display: flex;
-    justify-content: end;
-    text-align: center;
+    justify-content: start;
 }
-nav a{
-    color: #e7e2eb;
-    font-weight: 300;
+.menu-horizontal > li > a{
+    display: block;
+    padding: 15px;
+    color: #faf3fa;
     text-decoration: none;
-    margin-right: 10px;
-    font-size: 18px;
 }
-nav a:hover{
-    color: rgb(255, 255, 255);
-    background-color: #ec59d4;  
-    transition: 150ms;
+.menu-horizontal > li > a:hover{
+    background-color: rgb(19, 18, 18);
+}
+.menu-vertical{
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: #281513;
+}
+.menu-vertical li a{
+    display: block;
+    color: aliceblue;
+    text-decoration: none;
+    padding: 15px 15px 15px 20px;
+}
+.menu-horizontal li:hover .menu-vertical{
+    display: block;
+}
+.menu-vertical li>:hover{
+    background-color: #D47C31;
 }
 header .textos-header{
     display: flex;
@@ -47,19 +65,21 @@ header .textos-header{
 }
 
 .com h1{
-    padding: 50px;
+    padding: 35px;
     text-align: center;
+    color: #D47C31;
 }
 .comida{
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 50px;
     text-align: center;
-    margin: 20px;
+    padding: 100px;
 }
 .comida img{
     width: 200px;
-    height: 200px;
-    border-radius: 2px 25px 7px 10px;
+    height: 100px;
+    border-radius: 50% / 30%;
 }
 .comida h2{
     font-size: 18px;
@@ -67,9 +87,19 @@ header .textos-header{
 }
 .comida a{
     text-decoration: none;
+    color: #281513;
+}
+.comida a:hover{
+    color: #D47C31;
+}
+.comida .tacos, .comida .enchiladas, .comida .pozole, .comida .donas, .comida .chocoflan, .comida .tacos, .comida .muerto{
+    background-color: #f0f0f0;
+    padding: 50px 1px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 20px black;
 }
 footer{
-    background-color: #FC5C7D;
+    background-color: #D47C31;
     padding: 40px 0;
     margin: 20px 0;
     text-align: center;
