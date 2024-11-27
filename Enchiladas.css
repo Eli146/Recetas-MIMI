@@ -56,7 +56,62 @@ nav{
     background-color: #D47C31;
 }
 /*Aqui es la sección para el desarrolo de la receta*/
-
+main{
+    background-color: #EAE2B7;
+    margin: 100px 150px;
+    box-shadow: 4px 10px 6px black;
+}
+.title{
+    display: block;
+    text-align: center;
+    padding-top: 40px;
+}
+.title h1{
+    border-bottom: 2px inset #D47C31;
+    margin: 0 55px;
+}
+.title p{
+    border-top: 2px inset #D47C31;
+    margin: 0 55px;
+}
+.title img{
+    margin: 30px;
+    border-radius: 50% / 20%;
+}
+.food-2{
+    display: flex;
+    justify-content: baseline;
+    gap: 50px;
+    text-align: start;
+    margin: 50px;
+    padding-bottom: 100px;
+}
+.ingredients{
+    background-color: #7a3900bd;
+    padding: 30px 50px;
+}
+.ingredients h2{
+    color: white;
+    border-bottom: 2px solid white;
+    margin-bottom: 10px;
+}
+.ingredients h3{
+    color: #490000;
+    margin: 10px;
+}
+.ingredients li{
+    color: white;
+}
+.preparation h2{
+    border-bottom: 2px solid black;
+    margin-bottom: 20px;
+}
+.preparation h3{
+    margin: 20px 0;
+}
+.preparation li{
+    margin: 8px;
+}
 /*Aqui inicia la sección de footer*/
 footer{
     background-color: #D47C31;
