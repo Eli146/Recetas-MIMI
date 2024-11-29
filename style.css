@@ -7,9 +7,10 @@
 body{
     font-family: "Open Sans", sans-serif;
 }
+/*Aqui inicia el menu*/
 
 header{
-    width: 100%;
+    max-width: 100%;
     height: 600px;
     background-image: url(Recetas\ MIMI\ \(1\).png);
     background-size: cover;
@@ -19,7 +20,7 @@ header{
 }
 nav{
     margin: auto;
-    font-size: 15px;
+    font-size: 0.9rem;
 }
 .menu-horizontal{
     list-style: none;
@@ -63,41 +64,97 @@ header .textos-header{
     flex-direction: column;
     text-align: center;
 }
-
-.com h1{
-    padding: 35px;
+/*Aqui inicia la sección de bienvenida*/
+.welcome{
+    display: flex;
+    justify-content: space-around;
+    margin: 150px;
+    gap: 100px;
+}
+.welcome .text h1{
+    color: #D47C31;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #D47C31;
+}
+.welcome .text p{
+    margin-bottom: 15px;
+}
+/*Aqui inicia la nueva pag. editada de recetas*/
+.sec-food h1{
     text-align: center;
     color: #D47C31;
+    font-size: 20px;
 }
-.comida{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 50px;
+.food{
+    display: flex;
+    justify-content: space-around;
     text-align: center;
+    margin: 20px 80px 80px 80px;
+}
+.food .galeria{
+    background-color: #ebe2e2;
+    padding: 20px 30px;
+    box-shadow: 1px 4px 6px rgb(0, 0, 0);
+}
+.food .galeria:hover{
+    background-color: #D47C31;
+}
+/*Aqui inicia la sección acerca de mi*/
+.acerca-de-mi{
+    display: flex;
+    justify-content: space-around;
+    margin: 150px;
+    gap: 100px;
+}
+.acerca-de-mi h2{
+    color: #D47C31;
+}
+.welcome .text p{
+    margin-bottom: 15px;
+}
+/*Aqui inicia la sección de contacto*/
+.contacto{
+    display: inline-flex;
+    justify-content: space-around;
     padding: 100px;
 }
-.comida img{
-    width: 200px;
-    height: 100px;
-    border-radius: 50% / 30%;
+.contac{
+    background-color: #281513;
+    padding: 100px;
 }
-.comida h2{
-    font-size: 18px;
-    color: black;
+.contac h2{
+    text-align: center;
+    color: #e5e0e7;
+    margin-bottom: 15px;
 }
-.comida a{
-    text-decoration: none;
-    color: #281513;
+.contac p{
+    color: #e5e0e7;
 }
-.comida a:hover{
-    color: #D47C31;
+.form{
+    display: flex;
+    gap: 20px;
+    background-color: #D47C31;
+    padding: 100px;
 }
-.comida .tacos, .comida .enchiladas, .comida .pozole, .comida .donas, .comida .chocoflan, .comida .tacos, .comida .muerto{
-    background-color: #f0f0f0;
-    padding: 50px 1px;
-    border-radius: 20px;
-    box-shadow: 1px 1px 20px black;
+.form label{
+    font-weight: bold;
 }
+.form input, .form textarea{
+    width: 100%;
+    padding: 15px;
+}
+.form button{
+    width: 5rem;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+
+}
+.form button:hover{
+    background-color: #310000;
+    color: #e5e0e7;
+}
+
 /*Aqui inicia el pie de la pagina*/
 footer{
     background-color: #D47C31;
