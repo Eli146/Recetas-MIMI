@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -8,110 +9,128 @@ body{
     font-family: "Open Sans", sans-serif;
 }
 /*Aqui inicia el menu*/
-
-header{
-    max-width: 100%;
-    height: 600px;
-    background-image: url(Recetas\ MIMI\ \(1\).png);
-    background-size: cover;
-    background-attachment: fixed;
-    position: relative;
-    color: #f7f3f8;
+.encabezado{
+    display: flex;
+    justify-content: flex-start;
+    background-color: #cfa440;
+}
+.encabezado .logo{
+    padding: 2px 0px 0px 15px;
+    text-align: center;
+}
+.encabezado .logo img{
+    width: 30px;
 }
 nav{
+    max-width: 100%;
     margin: auto;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 .menu-horizontal{
     list-style: none;
     display: flex;
-    justify-content: start;
+    gap: 100px;
 }
 .menu-horizontal > li > a{
     display: block;
-    padding: 15px;
-    color: #faf3fa;
+    padding: 22px;
+    color: #393738;
     text-decoration: none;
 }
 .menu-horizontal > li > a:hover{
-    background-color: rgb(19, 18, 18);
+    color: #ffffff;
+    background-color: #9caab0;
 }
 .menu-vertical{
     position: absolute;
     display: none;
     list-style: none;
     width: 200px;
-    background-color: #281513;
+    background-color: #9caab0;
 }
-.menu-vertical li a{
+.menu-vertical > li > a{
     display: block;
     color: aliceblue;
     text-decoration: none;
     padding: 15px 15px 15px 20px;
 }
-.menu-horizontal li:hover .menu-vertical{
+.menu-horizontal > li:hover .menu-vertical{
     display: block;
 }
-.menu-vertical li>:hover{
-    background-color: #D47C31;
+.menu-vertical > li:hover{
+    background-color: #b38b6b;
 }
-header .textos-header{
-    display: flex;
-    height: 430px;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
+/*Aqui va la imagen de encabezado*/
+.img-pri{
+    max-width: 100%;
+    height: 600px;
+    background-image: url(https://img.freepik.com/foto-gratis/vista-superior-pescado-frito-sarten-limon-perejil-sobre-mantel-cuadros-blanco-amarillo_140725-144775.jpg?ga=GA1.1.854045915.1732919316&semt=ais_hybrid);
+    background-size: cover;
+    background-attachment: fixed;
+    color: #f7f3f8;
 }
 /*Aqui inicia la sección de bienvenida*/
 .welcome{
     display: flex;
     justify-content: space-around;
-    margin: 150px;
-    gap: 100px;
+    margin: 120px 40px;
+    background-color: #9caab0;
+    border-radius: 400px 0px 0px 400px;
+    box-shadow: 2px 15px 10px #797979;
+    gap: 1.5rem;
+}
+.welcome .img-i img{
+    border-radius: 400px 0px 0px 400px;
+    box-shadow: 1px 15px 12px #797979;
 }
 .welcome .text h1{
-    color: #D47C31;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #D47C31;
+    color: #393738;
+    margin: 30px;
+    border-bottom: 2px solid #474747;
 }
 .welcome .text p{
-    margin-bottom: 15px;
+    line-height: 1.7rem;
+    margin: 0px 30px;
+    color: rgb(53, 53, 53);
+}
+/*Aqui va la seccion de sugerencia de recetas*/
+.what-foodt{
+    margin: 80px 80px 40px 80px;
+    text-align: center;
+    line-height: 3rem;
+}
+.food-sug{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    margin: 0px 50px;
+}
+.food-sug .food-1{
+    background-color: #cfa440;
+    border-radius: 0px 0px 20px 20px;
+}
+.food-1 .title > a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #272727;
 }
 /*Aqui inicia la nueva pag. editada de recetas*/
-.sec-food h1{
+.recipes-title h1{
     text-align: center;
-    color: #D47C31;
-    font-size: 20px;
+    margin: 120px 80px 40px 80px;
 }
-.food{
+.food-conteiner{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     text-align: center;
-    margin: 20px 80px 80px 80px;
+    margin: 0px 50px;
 }
-.food .galeria{
-    background-color: #ebe2e2;
-    padding: 20px 30px;
-    box-shadow: 1px 4px 6px rgb(0, 0, 0);
+.food-conteiner .recipes-title a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #272727;
 }
-.food .galeria:hover{
-    background-color: #D47C31;
-}
-/*Aqui inicia la sección acerca de mi*/
-.acerca-de-mi{
-    display: flex;
-    justify-content: space-around;
-    margin: 150px;
-    gap: 100px;
-}
-.acerca-de-mi h2{
-    color: #D47C31;
-}
-.welcome .text p{
-    margin-bottom: 15px;
-}
+
 /*Aqui inicia la sección de contacto*/
 .contacto{
     display: inline-flex;
@@ -119,21 +138,28 @@ header .textos-header{
     padding: 100px;
 }
 .contac{
-    background-color: #281513;
+    background-color: #9caab0;
     padding: 100px;
+    box-shadow: 1px 9px 15px #9caab0;
 }
 .contac h2{
     text-align: center;
-    color: #e5e0e7;
+    color: #393738;
     margin-bottom: 15px;
 }
 .contac p{
-    color: #e5e0e7;
+    color: #393738;
+    text-align: center;
+}
+.contac img{
+    width: 200px;
+    margin: 15px 0px 0px 90px;
 }
 .form{
     display: flex;
     gap: 20px;
-    background-color: #D47C31;
+    background-color: #cfa440;
+    box-shadow: 1px 9px 15px #9caab0;
     padding: 100px;
 }
 .form label{
@@ -157,11 +183,19 @@ header .textos-header{
 
 /*Aqui inicia el pie de la pagina*/
 footer{
-    background-color: #D47C31;
-    padding: 40px 0;
-    margin: 20px 0;
-    text-align: center;
-}
-footer p{
+    background-color: #cfa440;
     color: #e5e0e7;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 30px 20px;
 }
+.links-ul{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 50px;
+    list-style: none;
+    cursor: pointer;
+}
+
