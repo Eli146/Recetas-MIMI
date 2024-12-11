@@ -8,28 +8,19 @@
 body{
     font-family: "Open Sans", sans-serif;
 }
+
 /*Aqui inicia el menu*/
-.encabezado{
+.header{
     display: flex;
     justify-content: space-between;
     background-color: #7b8f3b;
-}
-.encabezado .logo{
-    padding: 2px 0px 0px 15px;
-    text-align: center;
-}
-.encabezado .logo img{
-    width: 30px;
-}
-nav{
-    max-width: 100%;
-    margin: auto;
-    font-size: 1rem;
+    width: 100%;
 }
 .menu-horizontal{
-    list-style: none;
     display: flex;
-    gap: 100px;
+    flex-wrap: wrap;
+    gap: 3.75rem;
+    list-style: none;
 }
 .menu-horizontal > li > a{
     display: block;
@@ -61,33 +52,35 @@ nav{
     background-color:  #131212;
 }
 /*Aqui va la imagen de encabezado*/
-.img-pri{
-    max-width: 100%;
-    height: 600px;
+.img-header{
+    width: 100%;
+    height: 100vh;
     background-image: url(https://img.freepik.com/foto-gratis/mesa-llena-comida-que-incluye-plato-comida-plato-comida_188544-25935.jpg?ga=GA1.1.854045915.1732919316&semt=ais_tags_boosted);
     background-size: cover;
     background-attachment: fixed;
 }
-/*Aqui inicia la sección de bienvenida*/
+/*Aqui va la seccion de bienvenida*/
 .welcome{
     display: flex;
-    justify-content: space-around;
-    margin: 120px 0px;
-    padding: 100px;
-    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin: 120px 50px;
 }
 .welcome .img-i > img{
     position: relative;
-    bottom: 50px;
+    bottom: 30px;
     left: 50px;
+    border-radius: 50%;
 }
 .welcome .text{
     background-color: #7b8f3b;
     position: relative;
     top: 80px;
-    right: 50px;
-    margin: 80px 10px;
+    right:20px;
+    margin: 100px 10px;
     padding: 15px;
+    flex: 1 0 350px;
 }
 .welcome .text > h1{
     color: #393738;
@@ -102,61 +95,85 @@ nav{
 .cuadro{
     background-color: #131212;
     position: absolute;
-    left: 60px;
-    padding: 260px 600px;
+    justify-content: end;
+    left: 100px;
+    padding: 13% 40%;
 }
-/*Aqui va la seccion de sugerencia de recetas*/
-.what-foodt{
-    margin: 80px 80px 40px 80px;
+
+/*Aqui va la seccion de recomendaciones*/
+.coteiner-galery .galery-title{
+    margin-bottom: 50px;
     text-align: center;
-    line-height: 3rem;
-}
-.food-sug{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
-    max-width: 1200px;
-    margin: auto;
     justify-content: center;
-    text-align: center;
+    padding: 150px;
+    background-image: url(https://img.freepik.com/foto-gratis/vista-superior-papas-ralladas-enteras-alrededor-bloc-notas-sal-pimienta-negra-sobre-superficie-madera-espacio-copia_141793-10583.jpg?ga=GA1.1.854045915.1732919316&semt=ais_hybrid);
+    width: 95%;
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 30px;
+    border-radius: 10px;
 }
-.food-sug .food-1 > img{
-    border-radius: 20px;
-    width: 100%;
-    max-width: 200px;
-    height: 200px;
-    object-fit: cover;
+.coteiner-galery .search-input {
+    width: 300px;
+    padding: 10px;
+    border: 2px solid #2b3a29;
+    outline: none;
+    font-size: 1rem;
 }
-.food-sug .title > a{
-    text-decoration: none;
-    font-size: 21px;
+.coteiner-galery .search-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #0c0c0c;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+.coteiner-galery .search-btn:hover {
     background-color: #7b8f3b;
-    color: white;
-    padding: 20px 40px;
-    border-radius: 20px;
-    margin-bottom: 200px;
 }
-.food-sug .title > a:hover{
-    background-color: #131212;
+.coteiner-galery .section-galery{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: center;
+    justify-content: center;
+    margin: 30px;
+}
+.coteiner-galery .section-galery button{
+    padding: 5px 30px;
+    background-color: #7b8f3b;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0 4px 6px rgb(231, 116, 38);
+}
+.coteiner-galery .section-galery button:hover{
+    background-color: #0c0c0c;
+    color: #ffffff;
+    box-shadow: 0 6px 8px rgb(88, 88, 88);
+    transform: scale(1.05);
+}
+.secction-galery button:active {
+    background-color: #7b8f3b;
+    transform: scale(0.95);
+}
 
-}
+/*Aqui inicia la seccion de frecetas*/
 
-/*Aqui inicia la nueva pag. editada de recetas*/
-.recipes{
-    background-color: #2b3a29;
-    border-radius: 50%;
-}
 .recipes-title h1{
     text-align: center;
+    justify-content: center;
     padding: 10px 150px;
     margin: 120px 50px 20px 50px;
-    color: #e5e0e7;
-    background-color: #2b3a29;
-    border-radius: 20px;
+    color: #0c0c0c;
+    font-size: 2rem;
 }
 .food-conteiner{
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
     text-align: center;
     margin: 0px 50px;
 }
@@ -168,17 +185,9 @@ nav{
     object-fit: cover;
     width: 200px;
     height: 200px;
-    transition: width 2s, height 2s, transform 2s;
+    border-radius: 50% ;
 }
-
-.food-conteiner .recipes-1 a img:hover{
-    width: 250px;
-    height: 250px;
-    transform: rotate(180deg);
-}
-
-
-
+/*Aqui inicia la seccion de clases de cocina*/
 /*Aqui inicia la sección de contacto*/
 .contacto{
     display: inline-flex;
@@ -247,4 +256,123 @@ footer{
     list-style: none;
     cursor: pointer;
 }
+
+@media screen and (max-width: 600px) {
+    .header{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .menu-horizontal{
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        align-items: flex-start;
+    }
+    .menu-horizontal > li > a {
+        font-size: 16px;
+        padding: 5px;
+    }
+    .img-header{
+        width: 100%;
+        height: 50vh;
+        background-size: cover; 
+    }
+    .welcome {
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 20px;
+        gap: 1rem;
+        margin: 40px 0;
+    }
+    .welcome .img-i > img {
+        width: 150px;
+        height: 150px;
+        bottom: 0;
+        left: 0;
+    }
+    .welcome .text {
+        top: 0;
+        right: 0;
+        margin: 10px 0px;
+        padding: 10px;
+    }
+    .welcome .text > h1 {
+        font-size: 18px;
+        line-height: 2rem;
+    }
+    .welcome .text > p {
+        line-height: 1.5rem;
+        font-size: 16px;
+        margin: 0px 5px;
+    }
+    .cuadro {
+        left: 10px;
+        padding: 100px 20px;
+        width: 90%;
+    }
+    .conteiner-galery .galery-title {
+        padding: 10px;
+        height: auto;
+        font-size: 1.5rem;
+    }
+    .conteiner-galery .search-input {
+        width: 80%;
+        font-size: 0.9rem;
+    }
+    .conteiner-galery .search-btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+    .galery-title  h1 {
+        font-size: 18px;
+    }
+    .recipes-title h1 {
+        font-size: 16px;
+        text-align: center;
+        justify-content: center;
+    }
+    .img-i img{
+        width: 200px;
+        height: 200px;
+    }
+    .food-conteiner .recipes-1 a img {
+        width: 100px;
+        height: 100px;
+    }
+    .contacto {
+        flex-direction: column;
+        padding: 20px;
+        gap: 1rem;
+    }
+    .contac, .form {
+        padding: 20px;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 400px;
+        box-shadow: none;
+    }
+    .contac img {
+        margin: 10px auto;
+        width: 100px;
+    }
+    .form {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .form button {
+        width: 100%;
+    }
+    footer {
+        flex-wrap: wrap;
+        padding: 30px 15px;
+        justify-content: center;
+        gap: 20px;
+    }
+    .links-ul {
+        gap: 30px;
+    }
+}
+
+
+
 
